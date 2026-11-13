@@ -1,0 +1,49 @@
+{
+  "name": "@runalith/adaptive-goal-runtime",
+  "version": "0.1.0",
+  "description": "Read-only AGG action-intent evidence binding and lineage resolution.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./binding-resolver": "./src/runtime/adaptive-goal-action-intent-binding-resolver.js"
+  },
+  "files": [
+    "index.js",
+    "src/",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "CHANGELOG.md",
+    "docs/"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "test": "node --test tests/*.mjs",
+    "check": "npm run check:manifest && node --check index.js && npm test",
+    "check:manifest": "node scripts/verify-source-manifest.mjs",
+    "pack:check": "npm pack --dry-run",
+    "test:packed-consumer": "node scripts/test-adaptive-goal-runtime-packed-consumer.mjs"
+  },
+  "dependencies": {
+    "@runalith/workflow-contracts": "https://github.com/nplongx/runalith-workflow-contracts/archive/4db6c79839fe27f1171be341b824dc3ebd6f8aa3.tar.gz",
+    "@runalith/workflow-runtime": "https://github.com/nplongx/workflow-runtime/archive/5ff11de3fe403c2007d8db96df7730a3c1d98a4f.tar.gz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nplongx/adaptive-goal-runtime.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nplongx/adaptive-goal-runtime/issues"
+  },
+  "homepage": "https://github.com/nplongx/adaptive-goal-runtime#readme",
+  "keywords": [
+    "adaptive-goal-graph",
+    "evidence-binding",
+    "action-intent",
+    "read-only-runtime"
+  ]
+}

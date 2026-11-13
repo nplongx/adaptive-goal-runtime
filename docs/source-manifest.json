@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "sourceRepository": "https://github.com/nplongx/runalith",
+  "sourceBranch": "integration/runalith-system-20261107",
+  "sourceBaseRevision": "29c24cfa2b6ead5704d26cf2746bc384f2938b80",
+  "sourceWasDirty": true,
+  "extractionScope": "read-only AGG action-intent candidate/evidence binding resolver only",
+  "integrationModel": "Workflow Read Port v1 + injected trust/semantic verifiers; no database or writes",
+  "pinnedDependencies": {
+    "@runalith/agent-contracts": "7253657b5c3e2815cd21afed08d1e7027510d866",
+    "@runalith/workflow-contracts": "4db6c79839fe27f1171be341b824dc3ebd6f8aa3",
+    "@runalith/workflow-runtime": "5ff11de3fe403c2007d8db96df7730a3c1d98a4f"
+  },
+  "fileCount": 20,
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "6e4147d55b575dc85174b14f5355ba59a25fd3ba61e6f323c71c9bdf4e13b49a",
+      "sizeBytes": 486
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "5612d77237e802533d338bd0e9973095d4a81a4376f55e172a20024021cc0784",
+      "sizeBytes": 40
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "74e9115e6075e6b4a6e3061261c6d1da4c28675e501ebffabd8b4aa7f3718cd4",
+      "sizeBytes": 201
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "sha256": "d6e79528b7e321d912bbfc00e40ed68a29fddf84f13e795bdb743788a3ee5931",
+      "sizeBytes": 269
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "d64eea727d59bac40a09bdc56a0f5dfd76ad2c9a08cf528a66b613f2a0df3b2b",
+      "sizeBytes": 545
+    },
+    {
+      "path": "index.js",
+      "sha256": "fe1cc52812443c28d6c3cb79588ed3a772732fc9c3a3e18ebec287e9d17068ec",
+      "sizeBytes": 1072
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "1126322e2cc8d165adc4c792eeb195717de2bcc7b39be1ce77959d78e87ef685",
+      "sizeBytes": 1056
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "3e3aefab2e3d420f39e1a2b754851b54aea9be117e3c67ee85ce2ece16cf0113",
+      "sizeBytes": 6776
+    },
+    {
+      "path": "package.json",
+      "sha256": "a5e7cdcdcecd49488f432880a3218e3bcfdd4c880597ad715a28de415472adaf",
+      "sizeBytes": 1554
+    },
+    {
+      "path": "README.md",
+      "sha256": "1493495a5875cb9f9f7c42d3f43518b9c4fb277f6d59b92bdee38baf2f05c6fe",
+      "sizeBytes": 2144
+    },
+    {
+      "path": "scripts/test-adaptive-goal-runtime-packed-consumer.mjs",
+      "sha256": "c387b2d27abd99f59e50eacd5fa694d870a8027e5296931a44f5773bf17b420c",
+      "sizeBytes": 2174
+    },
+    {
+      "path": "scripts/verify-source-manifest.mjs",
+      "sha256": "64dba4d09e215836b1a70ca20bd8e6fcce79e13828ee1af35a8859c58de9c7e4",
+      "sizeBytes": 1560
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "428406cbf6b44be3957fcc8f9bfc2d3c2e2984fb7fd4c01d2bad1abc3dd0635b",
+      "sizeBytes": 518
+    },
+    {
+      "path": "src/adaptive-goal-action-intent-binding-resolver.js",
+      "sha256": "fae132f6d70099bf5fd4d7dcc82a33a48c1915801aadeb61c094ed4bacc538de",
+      "sizeBytes": 8962
+    },
+    {
+      "path": "src/runtime/adaptive-goal-action-intent-binding-resolver.js",
+      "sha256": "b3d43c209f1d75259b22af37f24297f5389ffff1a67c73f86ecfd38e29f053e5",
+      "sizeBytes": 9084
+    },
+    {
+      "path": "src/runtime/agg-action-intent-workflow-port.js",
+      "sha256": "591eb7374cfb2ef1842900fe2fd8567e5dd8720b5246526f8957492c41298010",
+      "sizeBytes": 2020
+    },
+    {
+      "path": "src/runtime/workflow-contracts-public-api.js",
+      "sha256": "1057220e4d9fd97925d54aa5ade21eb0c03634de0b96dc53ee9beca28628cda7",
+      "sizeBytes": 46
+    },
+    {
+      "path": "src/runtime/workflow-plan-public-api.js",
+      "sha256": "fe8e2ee123e2c3b7257ca17cbb22cb30fa49c4e2415c6d64cf034259e28eb3fd",
+      "sizeBytes": 58
+    },
+    {
+      "path": "tests/test-adaptive-goal-action-intent-binding-resolver.mjs",
+      "sha256": "8df87def9bec635ca4181d710398a50b319280adb69b07be461f7ac07b9f6d3b",
+      "sizeBytes": 2469
+    },
+    {
+      "path": "tests/test-read-only-boundary.mjs",
+      "sha256": "7931d04f4ba5432ea25cc8eb3301ca10dca8dadf73c2920e6ab7a95d87dbd802",
+      "sizeBytes": 3444
+    }
+  ]
+}
