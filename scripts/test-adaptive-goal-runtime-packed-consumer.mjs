@@ -20,7 +20,7 @@ try{
   const packed=JSON.parse(run('npm',['pack','--json','--pack-destination',tmp],root,'npm pack'));
   assert.equal(packed.length,1);
   assert.equal(packed[0].name,'@runalith/adaptive-goal-runtime');
-  assert.equal(packed[0].version,'0.4.0');
+  assert.equal(packed[0].version,'0.5.0');
   const tarball=path.join(tmp,packed[0].filename);
   run('npm',['install','--ignore-scripts','--no-audit','--no-fund','--prefix',consumer,tarball],root,'install package tarball');
   const smoke=[
@@ -31,7 +31,10 @@ try{
     "import * as semantic from '@runalith/adaptive-goal-runtime/action-intent-policy';",
     "import * as compatibility from '@runalith/adaptive-goal-runtime/plan-compatibility';",
     "import * as readiness from '@runalith/adaptive-goal-runtime/execution-readiness';",
+    "import * as proposal from '@runalith/adaptive-goal-runtime/execution-graph-proposal';",
     "assert.equal(typeof agg.createAdaptiveGoalActionIntentBindingResolver,'function');",
+    "assert.equal(typeof agg.buildAdaptiveGoalExecutionGraphProposal,'function');",
+    "assert.equal(typeof proposal.verifyAdaptiveGoalExecutionGraphProposalHash,'function');",
     "assert.equal(typeof agg.buildAdaptiveGoalActionIntentSemanticVerification,'function');",
     "assert.equal(typeof semantic.validateCompiledAdaptiveGoalActionIntentSemanticVerification,'function');",
     "assert.equal(semantic.ADAPTIVE_GOAL_ACTION_INTENT_SEMANTIC_POLICY_VERSION,1);",

@@ -4,14 +4,14 @@
   "sourceBranch": "integration/runalith-system-20261107",
   "sourceBaseRevision": "29c24cfa2b6ead5704d26cf2746bc384f2938b80",
   "sourceWasDirty": true,
-  "extractionScope": "pure AGG execution readiness, Plan Graph compatibility, action-intent semantic policy, read-only candidate/evidence binding",
-  "integrationModel": "detached validated Workflow/evidence snapshots + package-owned pure contracts; host retains DB/file/trust resolvers",
+  "extractionScope": "pure AGG semantic policy, read-only evidence binding, Plan compatibility/readiness and review-only proposal builder",
+  "integrationModel": "detached DTOs + injected host trust/evidence boundaries; no DB/filesystem/writes",
   "pinnedDependencies": {
     "@runalith/agent-contracts": "7253657b5c3e2815cd21afed08d1e7027510d866",
     "@runalith/workflow-contracts": "4db6c79839fe27f1171be341b824dc3ebd6f8aa3",
     "@runalith/workflow-runtime": "5ff11de3fe403c2007d8db96df7730a3c1d98a4f"
   },
-  "fileCount": 28,
+  "fileCount": 30,
   "files": [
     {
       "path": ".github/workflows/ci.yml",
@@ -25,8 +25,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "884dd4043b318255306961458050b4431c5fa15e293b5636e5007362e707a4b9",
-      "sizeBytes": 691
+      "sha256": "42cec1ecb98766872accbdf041032e5c2a24ef3ce607009e2a7fdd334a425fbe",
+      "sizeBytes": 928
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -40,8 +40,8 @@
     },
     {
       "path": "index.js",
-      "sha256": "4e9c68ef3fe84010cf9aa7dd7e6c1e7e169193a99a0144dd8cd1ea805bffe67d",
-      "sizeBytes": 1277
+      "sha256": "ce4345448e1ae0af13811424c2a1abb7ead8fb8386c81b7df38c5c7f110ebb53",
+      "sizeBytes": 1351
     },
     {
       "path": "LICENSE",
@@ -50,13 +50,13 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "3d40e595f1bbd2caba9556569cd3313077aadfa0ead09826e653cbd736aa945f",
+      "sha256": "0b47cbe20c7dcfa1c5c1df1fe5ab7960b4417b06aaa6ae726532d4453bd9ec84",
       "sizeBytes": 6924
     },
     {
       "path": "package.json",
-      "sha256": "9f4da372ed2455baa82e517ff37ac092ec2d4d5d90c7c319d4d85e25cc72adaf",
-      "sizeBytes": 2126
+      "sha256": "0fec61334ddd81a62c33ef3b90f13dacceebe09c86c8437411d0714487d0edc2",
+      "sizeBytes": 2304
     },
     {
       "path": "README.md",
@@ -65,8 +65,8 @@
     },
     {
       "path": "scripts/test-adaptive-goal-runtime-packed-consumer.mjs",
-      "sha256": "85388b6ab858e3190c7e2ac1ba218c95e101f845f4953471dc2e2795bb884ec0",
-      "sizeBytes": 3831
+      "sha256": "670647e04272debfb1731edd47ca625f973a3d8d3afcbc851ebf428f003ba89b",
+      "sizeBytes": 4102
     },
     {
       "path": "scripts/verify-source-manifest.mjs",
@@ -92,6 +92,11 @@
       "path": "src/runtime/adaptive-goal-action-intent-policy.js",
       "sha256": "70c338f3ebff96ae45a3b7d00ee6a189d5f9666ee6596f4a8e2ca04064e6114d",
       "sizeBytes": 13996
+    },
+    {
+      "path": "src/runtime/adaptive-goal-execution-graph-proposal.js",
+      "sha256": "e4eed374f52a6aba7a7f3038aabfe06148a3698e6ed2e0a78b0cb8ae332bb45f",
+      "sizeBytes": 42749
     },
     {
       "path": "src/runtime/adaptive-goal-execution-readiness.js",
@@ -139,6 +144,11 @@
       "sizeBytes": 5104
     },
     {
+      "path": "tests/test-adaptive-goal-execution-graph-proposal-boundary.mjs",
+      "sha256": "37f5ae40f3d57d2fb7dd3b6fd26e6f4689ff0e932f46b1104a1af2895403a70e",
+      "sizeBytes": 1370
+    },
+    {
       "path": "tests/test-adaptive-goal-execution-readiness.mjs",
       "sha256": "1ba3daabf93531b77865b448a933329527d6018a0e8401e572a3ccc3e4e80ff7",
       "sizeBytes": 11214
@@ -154,5 +164,5 @@
       "sizeBytes": 3444
     }
   ],
-  "packageVersion": "0.4.0"
+  "packageVersion": "0.5.0"
 }

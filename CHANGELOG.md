@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.0
+
+- Extract pure review-only Adaptive Goal Execution Graph proposal building and content-hash verification.
+- Inject host-owned WeakMap-backed draft-authentication predicate; no package-owned trust or authentication authority.
+
+
 ## 0.4.0
 
 - Extract pure, report-only execution readiness assessment over detached Workflow and evidence snapshots.

@@ -25,3 +25,5 @@ export function createAdaptiveGoalActionIntentBindingResolver(options = {}) {
 export * from './src/runtime/adaptive-goal-action-intent-policy.js';
 export * from './src/runtime/adaptive-goal-plan-compatibility.js';
 export * from './src/runtime/adaptive-goal-execution-readiness.js';
+
+export * from './src/runtime/adaptive-goal-execution-graph-proposal.js';

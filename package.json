@@ -1,7 +1,7 @@
 {
   "name": "@runalith/adaptive-goal-runtime",
-  "version": "0.4.0",
-  "description": "AGG review readiness, Plan Graph compatibility, role semantics, and read-only evidence binding.",
+  "version": "0.5.0",
+  "description": "AGG action-intent semantics, reviewed evidence binding, Plan compatibility, readiness and review-only proposal building.",
   "license": "MIT",
   "type": "module",
   "main": "./index.js",
@@ -10,7 +10,8 @@
     "./binding-resolver": "./src/runtime/adaptive-goal-action-intent-binding-resolver.js",
     "./action-intent-policy": "./src/runtime/adaptive-goal-action-intent-policy.js",
     "./plan-compatibility": "./src/runtime/adaptive-goal-plan-compatibility.js",
-    "./execution-readiness": "./src/runtime/adaptive-goal-execution-readiness.js"
+    "./execution-readiness": "./src/runtime/adaptive-goal-execution-readiness.js",
+    "./execution-graph-proposal": "./src/runtime/adaptive-goal-execution-graph-proposal.js"
   },
   "files": [
     "index.js",
@@ -45,15 +46,17 @@
   },
   "homepage": "https://github.com/nplongx/adaptive-goal-runtime#readme",
   "keywords": [
+    "action-intent",
+    "action-intent-semantics",
     "adaptive-goal-graph",
     "evidence-binding",
-    "action-intent",
-    "read-only-runtime",
-    "action-intent-semantics",
-    "role-policy",
-    "plan-compatibility",
-    "workflow-mapping",
     "evidence-readiness",
-    "execution-contract"
+    "execution-contract",
+    "execution-graph-proposal",
+    "plan-compatibility",
+    "read-only-runtime",
+    "review-only-proposal",
+    "role-policy",
+    "workflow-mapping"
   ]
 }
