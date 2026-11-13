@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "kind": "adaptive_goal_plan_graph_draft",
+  "status": "review_required",
+  "source": {
+    "mode": "shadow",
+    "graphHash": "966ebcc80e283e40875448541a88a00a5f1a798f209941327fdb80f8e4fd01de",
+    "candidatePlanId": "agg-1dc5c7b19c0e422b0f8a310c",
+    "candidateStatus": "proposed",
+    "verification": {
+      "status": "unverified",
+      "verified": false
+    },
+    "searchStatus": "proposals_found",
+    "searchExhaustive": true
+  },
+  "goal": {
+    "nodeId": "goal",
+    "label": "Target state"
+  },
+  "sourcePathNodeIds": [
+    "start",
+    "first-action",
+    "second-action",
+    "goal"
+  ],
+  "contextNodes": [],
+  "steps": [
+    {
+      "id": "agg-step-55d64b799823fe992994baec",
+      "sourceNodeId": "first-action",
+      "kind": "task",
+      "title": "Action 1",
+      "dependencies": [],
+      "estimates": {
+        "cost": null,
+        "risk": null,
+        "successConfidence": 0.9,
+        "reusePotential": null,
+        "informationValue": null,
+        "metricProvenance": {
+          "estimatedCost": {
+            "classification": "unknown",
+            "method": null,
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          },
+          "estimatedRisk": {
+            "classification": "unknown",
+            "method": null,
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          },
+          "estimatedSuccessConfidence": {
+            "classification": "caller_estimate_unverified",
+            "method": "unspecified caller estimate",
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          },
+          "reusePotential": {
+            "classification": "unknown",
+            "method": null,
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          },
+          "informationValue": {
+            "classification": "unknown",
+            "method": null,
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          }
+        }
+      },
+      "supportingEvidenceRefs": [],
+      "evidenceAssessment": {
+        "status": "missing",
+        "references": [],
+        "verifiedReferenceCount": 0
+      },
+      "execution": {
+        "enabled": false,
+        "authorization": "none",
+        "executable": null,
+        "args": null
+      },
+      "status": "proposed"
+    },
+    {
+      "id": "agg-step-99f2081d2a08c4084c44cd4e",
+      "sourceNodeId": "second-action",
+      "kind": "experiment",
+      "title": "Action 2",
+      "dependencies": [
+        "agg-step-55d64b799823fe992994baec"
+      ],
+      "estimates": {
+        "cost": null,
+        "risk": null,
+        "successConfidence": 0.9,
+        "reusePotential": null,
+        "informationValue": null,
+        "metricProvenance": {
+          "estimatedCost": {
+            "classification": "unknown",
+            "method": null,
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          },
+          "estimatedRisk": {
+            "classification": "unknown",
+            "method": null,
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          },
+          "estimatedSuccessConfidence": {
+            "classification": "caller_estimate_unverified",
+            "method": "unspecified caller estimate",
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          },
+          "reusePotential": {
+            "classification": "unknown",
+            "method": null,
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          },
+          "informationValue": {
+            "classification": "unknown",
+            "method": null,
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          }
+        }
+      },
+      "supportingEvidenceRefs": [],
+      "evidenceAssessment": {
+        "status": "missing",
+        "references": [],
+        "verifiedReferenceCount": 0
+      },
+      "execution": {
+        "enabled": false,
+        "authorization": "none",
+        "executable": null,
+        "args": null
+      },
+      "status": "proposed"
+    }
+  ],
+  "gates": {
+    "humanReviewRequired": true,
+    "workflowApprovalRequired": true,
+    "immutableExecutionPlanCreated": false,
+    "dispatchAllowed": false,
+    "executionAuthorized": false
+  },
+  "draftHash": "99a5f89ede750bc175a6532bc8a27b4a573c91bdd748b8f8469d60396035e851"
+}

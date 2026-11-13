@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0
+
+- Extract pure review-only Plan Graph to compiled Workflow compatibility assessment.
+- Export root and `./plan-compatibility` entrypoints.
+
 ## 0.2.0
 
 - Extract pure built-in role action-intent semantic policies and compiled semantic proof validation.

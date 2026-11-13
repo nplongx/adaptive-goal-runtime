@@ -4,7 +4,7 @@
 
 ## Scope
 
-The package owns pure AGG action-intent semantics for built-in roles (canonical operation, allowed target kinds, output type, completion criteria and canonical description), validates compiled semantic proofs/fingerprints, interprets one canonical `adaptive_goal.execution_plan_candidate_created` event, verifies the persisted candidate through an injected AGG verifier, checks compiler-binding hashes, binds evidence to current Workflow artifact/task/result/completion records, and invokes an injected reviewer-attestation verifier. It returns the exact typed action-intent bindings or fails closed.
+The package owns pure Plan Graph to compiled Workflow compatibility assessment (strict draft integrity, compiled-plan DAG integrity, explicit step/task mapping, prerequisite preservation and mandatory-task coverage), plus AGG action-intent semantics for built-in roles (canonical operation, allowed target kinds, output type, completion criteria and canonical description), validates compiled semantic proofs/fingerprints, interprets one canonical `adaptive_goal.execution_plan_candidate_created` event, verifies the persisted candidate through an injected AGG verifier, checks compiler-binding hashes, binds evidence to current Workflow artifact/task/result/completion records, and invokes an injected reviewer-attestation verifier. It returns the exact typed action-intent bindings or fails closed.
 
 It does **not** own a database, SQL, transactions, event writes, trust roots, signature custody, reviewer identity, Workflow approval, plan mutation, dispatch, or execution. All Workflow access arrives through the frozen, versioned **Workflow Port v1**. Port methods are synchronous and return bounded read snapshots; asynchronous methods are rejected by the resolver. Candidate-hash and reviewer-attestation verifiers are injected by the host. The package cannot authorize execution by itself.
 
@@ -23,6 +23,9 @@ npm run test:packed-consumer
 
 ```js
 import {
+  assessAdaptiveGoalPlanCompatibility,
+  ADAPTIVE_GOAL_COMPATIBLE_WORKFLOW_IDS,
+  assessAdaptiveGoalPlanCompatibility,
   createAdaptiveGoalActionIntentBindingResolver,
   getAdaptiveGoalActionIntentSemanticPolicy,
   canonicalAdaptiveGoalActionIntentDescription,
@@ -35,7 +38,7 @@ import {
 } from '@runalith/adaptive-goal-runtime';
 ```
 
-`./action-intent-policy` exposes the pure role-semantic policy, canonical description, semantic-proof builder and compiled-proof validator. `createAggActionIntentWorkflowPort(implementation)` accepts only the named read methods in `AGG_ACTION_INTENT_WORKFLOW_PORT_METHODS`, binds them to the supplied implementation, freezes the resulting port, and rejects any attempt to expose a DB/transaction surface. The resolver additionally requires host-supplied candidate-hash and reviewer-attestation verifiers.
+`./plan-compatibility` exposes the pure Plan Graph to compiled Workflow compatibility assessment. It is report-only and always keeps proposal creation, immutable-plan creation, human review, Workflow approval, dispatch and execution authorization separate. `./action-intent-policy` exposes the pure role-semantic policy, canonical description, semantic-proof builder and compiled-proof validator. `createAggActionIntentWorkflowPort(implementation)` accepts only the named read methods in `AGG_ACTION_INTENT_WORKFLOW_PORT_METHODS`, binds them to the supplied implementation, freezes the resulting port, and rejects any attempt to expose a DB/transaction surface. The resolver additionally requires host-supplied candidate-hash and reviewer-attestation verifiers.
 
 Legacy host import path remains a compatibility facade; canonical implementation lives in this repository.
 

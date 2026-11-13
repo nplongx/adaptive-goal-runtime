@@ -1,14 +1,15 @@
 {
   "name": "@runalith/adaptive-goal-runtime",
-  "version": "0.2.0",
-  "description": "Read-only AGG action-intent evidence binding, role semantic policy and lineage resolution.",
+  "version": "0.3.0",
+  "description": "AGG role semantics, Plan Graph to Workflow compatibility, and read-only action-intent evidence binding.",
   "license": "MIT",
   "type": "module",
   "main": "./index.js",
   "exports": {
     ".": "./index.js",
     "./binding-resolver": "./src/runtime/adaptive-goal-action-intent-binding-resolver.js",
-    "./action-intent-policy": "./src/runtime/adaptive-goal-action-intent-policy.js"
+    "./action-intent-policy": "./src/runtime/adaptive-goal-action-intent-policy.js",
+    "./plan-compatibility": "./src/runtime/adaptive-goal-plan-compatibility.js"
   },
   "files": [
     "index.js",
@@ -47,6 +48,8 @@
     "action-intent",
     "read-only-runtime",
     "action-intent-semantics",
-    "role-policy"
+    "role-policy",
+    "plan-compatibility",
+    "workflow-mapping"
   ]
 }
