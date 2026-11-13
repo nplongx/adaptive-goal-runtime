@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0
+
+- Extract pure, report-only execution readiness assessment over detached Workflow and evidence snapshots.
+- Export root and `./execution-readiness` entrypoints.
+
 ## 0.3.0
 
 - Extract pure review-only Plan Graph to compiled Workflow compatibility assessment.

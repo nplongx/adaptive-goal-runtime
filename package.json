@@ -1,7 +1,7 @@
 {
   "name": "@runalith/adaptive-goal-runtime",
-  "version": "0.3.0",
-  "description": "AGG role semantics, Plan Graph to Workflow compatibility, and read-only action-intent evidence binding.",
+  "version": "0.4.0",
+  "description": "AGG review readiness, Plan Graph compatibility, role semantics, and read-only evidence binding.",
   "license": "MIT",
   "type": "module",
   "main": "./index.js",
@@ -9,7 +9,8 @@
     ".": "./index.js",
     "./binding-resolver": "./src/runtime/adaptive-goal-action-intent-binding-resolver.js",
     "./action-intent-policy": "./src/runtime/adaptive-goal-action-intent-policy.js",
-    "./plan-compatibility": "./src/runtime/adaptive-goal-plan-compatibility.js"
+    "./plan-compatibility": "./src/runtime/adaptive-goal-plan-compatibility.js",
+    "./execution-readiness": "./src/runtime/adaptive-goal-execution-readiness.js"
   },
   "files": [
     "index.js",
@@ -32,7 +33,8 @@
   },
   "dependencies": {
     "@runalith/workflow-contracts": "https://github.com/nplongx/runalith-workflow-contracts/archive/4db6c79839fe27f1171be341b824dc3ebd6f8aa3.tar.gz",
-    "@runalith/workflow-runtime": "https://github.com/nplongx/workflow-runtime/archive/5ff11de3fe403c2007d8db96df7730a3c1d98a4f.tar.gz"
+    "@runalith/workflow-runtime": "https://github.com/nplongx/workflow-runtime/archive/5ff11de3fe403c2007d8db96df7730a3c1d98a4f.tar.gz",
+    "@runalith/agent-contracts": "https://github.com/nplongx/runalith-agent-contracts/archive/7253657b5c3e2815cd21afed08d1e7027510d866.tar.gz"
   },
   "repository": {
     "type": "git",
@@ -50,6 +52,8 @@
     "action-intent-semantics",
     "role-policy",
     "plan-compatibility",
-    "workflow-mapping"
+    "workflow-mapping",
+    "evidence-readiness",
+    "execution-contract"
   ]
 }

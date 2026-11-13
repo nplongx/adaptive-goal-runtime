@@ -4,14 +4,14 @@
   "sourceBranch": "integration/runalith-system-20261107",
   "sourceBaseRevision": "29c24cfa2b6ead5704d26cf2746bc384f2938b80",
   "sourceWasDirty": true,
-  "extractionScope": "pure AGG plan compatibility, role action-intent semantic policy, read-only candidate/evidence binding",
-  "integrationModel": "pure role-semantic contracts + Workflow Read Port v1 + injected trust verifiers; no database or writes",
+  "extractionScope": "pure AGG execution readiness, Plan Graph compatibility, action-intent semantic policy, read-only candidate/evidence binding",
+  "integrationModel": "detached validated Workflow/evidence snapshots + package-owned pure contracts; host retains DB/file/trust resolvers",
   "pinnedDependencies": {
     "@runalith/agent-contracts": "7253657b5c3e2815cd21afed08d1e7027510d866",
     "@runalith/workflow-contracts": "4db6c79839fe27f1171be341b824dc3ebd6f8aa3",
     "@runalith/workflow-runtime": "5ff11de3fe403c2007d8db96df7730a3c1d98a4f"
   },
-  "fileCount": 25,
+  "fileCount": 28,
   "files": [
     {
       "path": ".github/workflows/ci.yml",
@@ -25,8 +25,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "a16c1100cd4f7f3dfd0aaef01abe923df86af694db5303b806132ed9feff3552",
-      "sizeBytes": 519
+      "sha256": "884dd4043b318255306961458050b4431c5fa15e293b5636e5007362e707a4b9",
+      "sizeBytes": 691
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -40,8 +40,8 @@
     },
     {
       "path": "index.js",
-      "sha256": "107f693a9012aed7c49df51cfd9928799c455b0c053cf602a793dbd075398130",
-      "sizeBytes": 1209
+      "sha256": "4e9c68ef3fe84010cf9aa7dd7e6c1e7e169193a99a0144dd8cd1ea805bffe67d",
+      "sizeBytes": 1277
     },
     {
       "path": "LICENSE",
@@ -50,23 +50,23 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "3bb75776dbef631718bdee7d9a6d98c85c73ff42c0e0101327f57d62f031036f",
-      "sizeBytes": 6776
+      "sha256": "3d40e595f1bbd2caba9556569cd3313077aadfa0ead09826e653cbd736aa945f",
+      "sizeBytes": 6924
     },
     {
       "path": "package.json",
-      "sha256": "0f2e1c86cbbe6f17e8949a71ad3646cde549d4283ae26ba9dff8730d0a1f31f2",
-      "sizeBytes": 1855
+      "sha256": "9f4da372ed2455baa82e517ff37ac092ec2d4d5d90c7c319d4d85e25cc72adaf",
+      "sizeBytes": 2126
     },
     {
       "path": "README.md",
-      "sha256": "b0ae552af3f8543d136dec67f2e769fe78aca4b76a7e29d94bfe94acb9be1fdd",
-      "sizeBytes": 3281
+      "sha256": "bcc76a554434cc3cfefd4df701f58e6a8b96a4097736ad6498d34d1a474e0d94",
+      "sizeBytes": 3887
     },
     {
       "path": "scripts/test-adaptive-goal-runtime-packed-consumer.mjs",
-      "sha256": "08188404d022a17c1428d51649ccd6c24280783321086916c07287a10e6227fb",
-      "sizeBytes": 3177
+      "sha256": "85388b6ab858e3190c7e2ac1ba218c95e101f845f4953471dc2e2795bb884ec0",
+      "sizeBytes": 3831
     },
     {
       "path": "scripts/verify-source-manifest.mjs",
@@ -94,6 +94,11 @@
       "sizeBytes": 13996
     },
     {
+      "path": "src/runtime/adaptive-goal-execution-readiness.js",
+      "sha256": "ced9cd04bca0176e4fc592340bcac500e5b4be91eed913909e56df6e44ebc98c",
+      "sizeBytes": 25191
+    },
+    {
       "path": "src/runtime/adaptive-goal-plan-compatibility.js",
       "sha256": "4d0eb5882066c7e89e640ed16edf9001f605f30044b921d7f53c56edd8725485",
       "sizeBytes": 26073
@@ -119,6 +124,11 @@
       "sizeBytes": 4695
     },
     {
+      "path": "tests/fixtures/adaptive-goal-readiness-draft.json",
+      "sha256": "3391439e8656870ceab3157b083c87eb6f179c06eed12318b4d209145dd79cdb",
+      "sizeBytes": 3253
+    },
+    {
       "path": "tests/test-adaptive-goal-action-intent-binding-resolver.mjs",
       "sha256": "8df87def9bec635ca4181d710398a50b319280adb69b07be461f7ac07b9f6d3b",
       "sizeBytes": 2469
@@ -127,6 +137,11 @@
       "path": "tests/test-adaptive-goal-action-intent-policy.mjs",
       "sha256": "5c675c04b8fb6806c2bf27fa573a2a125c592aff9d67fd9d04c655ba728a6354",
       "sizeBytes": 5104
+    },
+    {
+      "path": "tests/test-adaptive-goal-execution-readiness.mjs",
+      "sha256": "1ba3daabf93531b77865b448a933329527d6018a0e8401e572a3ccc3e4e80ff7",
+      "sizeBytes": 11214
     },
     {
       "path": "tests/test-adaptive-goal-plan-compatibility.mjs",
@@ -139,5 +154,5 @@
       "sizeBytes": 3444
     }
   ],
-  "packageVersion": "0.3.0"
+  "packageVersion": "0.4.0"
 }

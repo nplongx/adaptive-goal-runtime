@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "kind": "adaptive_goal_plan_graph_draft",
+  "status": "review_required",
+  "source": {
+    "mode": "shadow",
+    "graphHash": "ae34e3e8a62d061de379784f94e63b2cbb959579933a12f1fb8ca70b1b27f753",
+    "candidatePlanId": "agg-e32a9444b05b147db19d350b",
+    "candidateStatus": "proposed",
+    "verification": {
+      "status": "unverified",
+      "verified": false
+    },
+    "searchStatus": "proposals_found",
+    "searchExhaustive": true
+  },
+  "goal": {
+    "nodeId": "goal",
+    "label": "Verified target"
+  },
+  "sourcePathNodeIds": [
+    "start",
+    "implement",
+    "goal"
+  ],
+  "contextNodes": [],
+  "steps": [
+    {
+      "id": "agg-step-edc50fc09bef8992a2515604",
+      "sourceNodeId": "implement",
+      "kind": "task",
+      "title": "Implement approved change",
+      "dependencies": [],
+      "estimates": {
+        "cost": null,
+        "risk": null,
+        "successConfidence": 0.9,
+        "reusePotential": null,
+        "informationValue": null,
+        "metricProvenance": {
+          "estimatedCost": {
+            "classification": "unknown",
+            "method": null,
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          },
+          "estimatedRisk": {
+            "classification": "unknown",
+            "method": null,
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          },
+          "estimatedSuccessConfidence": {
+            "classification": "caller_estimate_unverified",
+            "method": "unspecified caller estimate",
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          },
+          "reusePotential": {
+            "classification": "unknown",
+            "method": null,
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          },
+          "informationValue": {
+            "classification": "unknown",
+            "method": null,
+            "sourceRefs": [],
+            "confidence": null,
+            "provenanceVerified": false
+          }
+        }
+      },
+      "supportingEvidenceRefs": [
+        "artifact://artifact-architecture",
+        "artifact://artifact-requirements"
+      ],
+      "evidenceAssessment": {
+        "status": "declared_unverified",
+        "references": [
+          {
+            "reference": "artifact://artifact-architecture",
+            "classification": "durable_artifact_unverified",
+            "verified": false
+          },
+          {
+            "reference": "artifact://artifact-requirements",
+            "classification": "durable_artifact_unverified",
+            "verified": false
+          }
+        ],
+        "verifiedReferenceCount": 0
+      },
+      "execution": {
+        "enabled": false,
+        "authorization": "none",
+        "executable": null,
+        "args": null
+      },
+      "status": "proposed"
+    }
+  ],
+  "gates": {
+    "humanReviewRequired": true,
+    "workflowApprovalRequired": true,
+    "immutableExecutionPlanCreated": false,
+    "dispatchAllowed": false,
+    "executionAuthorized": false
+  },
+  "draftHash": "c4bb6ea870ce347875122e95caa4e03b193e0b857de84e949b45bd274bd6f774"
+}
