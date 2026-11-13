@@ -4,14 +4,14 @@
   "sourceBranch": "integration/runalith-system-20261107",
   "sourceBaseRevision": "29c24cfa2b6ead5704d26cf2746bc384f2938b80",
   "sourceWasDirty": true,
-  "extractionScope": "read-only AGG action-intent candidate/evidence binding resolver only",
-  "integrationModel": "Workflow Read Port v1 + injected trust/semantic verifiers; no database or writes",
+  "extractionScope": "read-only AGG action-intent role semantic policy and candidate/evidence binding resolver",
+  "integrationModel": "pure role-semantic contracts + Workflow Read Port v1 + injected trust verifiers; no database or writes",
   "pinnedDependencies": {
     "@runalith/agent-contracts": "7253657b5c3e2815cd21afed08d1e7027510d866",
     "@runalith/workflow-contracts": "4db6c79839fe27f1171be341b824dc3ebd6f8aa3",
     "@runalith/workflow-runtime": "5ff11de3fe403c2007d8db96df7730a3c1d98a4f"
   },
-  "fileCount": 20,
+  "fileCount": 22,
   "files": [
     {
       "path": ".github/workflows/ci.yml",
@@ -25,8 +25,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "74e9115e6075e6b4a6e3061261c6d1da4c28675e501ebffabd8b4aa7f3718cd4",
-      "sizeBytes": 201
+      "sha256": "16b6ea918ad740284e3e86e8fcff2183e23b7af22d341ee7a8e36cc6cb9c437f",
+      "sizeBytes": 369
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -40,8 +40,8 @@
     },
     {
       "path": "index.js",
-      "sha256": "fe1cc52812443c28d6c3cb79588ed3a772732fc9c3a3e18ebec287e9d17068ec",
-      "sizeBytes": 1072
+      "sha256": "3b3068d9a4f09b8248dcc0d7003321d0889ffcc3f4d8bffbfd1653b52c58b2f4",
+      "sizeBytes": 1142
     },
     {
       "path": "LICENSE",
@@ -50,23 +50,23 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "3e3aefab2e3d420f39e1a2b754851b54aea9be117e3c67ee85ce2ece16cf0113",
+      "sha256": "a787e423fbb2399d957fadc0c41a862139aff479d129b04823ced56ca09ff699",
       "sizeBytes": 6776
     },
     {
       "path": "package.json",
-      "sha256": "a5e7cdcdcecd49488f432880a3218e3bcfdd4c880597ad715a28de415472adaf",
-      "sizeBytes": 1554
+      "sha256": "3449fcfb0019d5e41f761834bfdae4c1547ad7b29d9ba0d240055de1d826bd3c",
+      "sizeBytes": 1711
     },
     {
       "path": "README.md",
-      "sha256": "1493495a5875cb9f9f7c42d3f43518b9c4fb277f6d59b92bdee38baf2f05c6fe",
-      "sizeBytes": 2144
+      "sha256": "8468bec96a2a5ddd85fdc791c99f0249f276c4bc5ed9dc94a47e6e359189c9aa",
+      "sizeBytes": 2705
     },
     {
       "path": "scripts/test-adaptive-goal-runtime-packed-consumer.mjs",
-      "sha256": "c387b2d27abd99f59e50eacd5fa694d870a8027e5296931a44f5773bf17b420c",
-      "sizeBytes": 2174
+      "sha256": "32a751c16ca5b11d7ac4916e56b7ae05d2edfe82aa1db92fa8c9dbf1c2841fc0",
+      "sizeBytes": 2568
     },
     {
       "path": "scripts/verify-source-manifest.mjs",
@@ -89,6 +89,11 @@
       "sizeBytes": 9084
     },
     {
+      "path": "src/runtime/adaptive-goal-action-intent-policy.js",
+      "sha256": "70c338f3ebff96ae45a3b7d00ee6a189d5f9666ee6596f4a8e2ca04064e6114d",
+      "sizeBytes": 13996
+    },
+    {
       "path": "src/runtime/agg-action-intent-workflow-port.js",
       "sha256": "591eb7374cfb2ef1842900fe2fd8567e5dd8720b5246526f8957492c41298010",
       "sizeBytes": 2020
@@ -109,9 +114,15 @@
       "sizeBytes": 2469
     },
     {
+      "path": "tests/test-adaptive-goal-action-intent-policy.mjs",
+      "sha256": "5c675c04b8fb6806c2bf27fa573a2a125c592aff9d67fd9d04c655ba728a6354",
+      "sizeBytes": 5104
+    },
+    {
       "path": "tests/test-read-only-boundary.mjs",
       "sha256": "7931d04f4ba5432ea25cc8eb3301ca10dca8dadf73c2920e6ab7a95d87dbd802",
       "sizeBytes": 3444
     }
-  ]
+  ],
+  "packageVersion": "0.2.0"
 }

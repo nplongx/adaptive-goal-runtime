@@ -21,3 +21,5 @@ export function createAdaptiveGoalActionIntentBindingResolver(options = {}) {
     : createAggActionIntentWorkflowPort(options.workflowPort);
   return createResolver({ ...options, workflowPort });
 }
+
+export * from './src/runtime/adaptive-goal-action-intent-policy.js';

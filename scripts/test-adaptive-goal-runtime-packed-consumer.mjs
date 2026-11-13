@@ -20,7 +20,7 @@ try{
   const packed=JSON.parse(run('npm',['pack','--json','--pack-destination',tmp],root,'npm pack'));
   assert.equal(packed.length,1);
   assert.equal(packed[0].name,'@runalith/adaptive-goal-runtime');
-  assert.equal(packed[0].version,'0.1.0');
+  assert.equal(packed[0].version,'0.2.0');
   const tarball=path.join(tmp,packed[0].filename);
   run('npm',['install','--ignore-scripts','--no-audit','--no-fund','--prefix',consumer,tarball],root,'install package tarball');
   const smoke=[
@@ -28,10 +28,14 @@ try{
     "import * as agg from '@runalith/adaptive-goal-runtime';",
     "import * as plan from '@runalith/workflow-runtime/workflow-plan';",
     "import * as contracts from '@runalith/workflow-contracts';",
+    "import * as semantic from '@runalith/adaptive-goal-runtime/action-intent-policy';",
     "assert.equal(typeof agg.createAdaptiveGoalActionIntentBindingResolver,'function');",
+    "assert.equal(typeof agg.buildAdaptiveGoalActionIntentSemanticVerification,'function');",
+    "assert.equal(typeof semantic.validateCompiledAdaptiveGoalActionIntentSemanticVerification,'function');",
+    "assert.equal(semantic.ADAPTIVE_GOAL_ACTION_INTENT_SEMANTIC_POLICY_VERSION,1);",
     "assert.equal(plan.WORKFLOW_PLAN_API_VERSION,1);",
     "assert.equal(typeof contracts.validateArtifact,'function');",
-    "console.log('packed AGG resolver, Workflow Plan API and Workflow Contracts imports PASS');"
+    "console.log('packed AGG resolver/semantic policy, Workflow Plan API and Workflow Contracts imports PASS');"
   ].join('\n');
   run(process.execPath,['--input-type=module','-e',smoke],consumer,'packed consumer smoke');
   console.log('AGG Runtime packed consumer PASS: '+packed[0].filename+' ('+packed[0].entryCount+' files)');
